@@ -1,0 +1,125 @@
+/* styles.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#dynamicForm {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+#dynamicForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+#dynamicForm input[type="text"],
+#dynamicForm select,
+#dynamicForm input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333333;
+}
+
+#dynamicForm input[type="file"] {
+    padding: 0.5rem;
+}
+
+#dynamicForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#dynamicForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#options {
+    margin-bottom: 1rem;
+}
+
+#textFieldContainer,
+#fileSelectContainer,
+#newSelectContainer,
+#linksContainer {
+    margin-top: 1rem;
+}
+
+#submitButton {
+    margin-top: 1rem;
+}
+
+.alert {
+    padding: 1rem;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    #dynamicForm {
+        padding: 1rem;
+    }
+
+    #dynamicForm input[type="submit"] {
+        font-size: 0.9rem;
+    }
+}
+
+#linksContainer p{
+    margin: 10px;
+}
+
+#logoutButton {
+    position: absolute;
+    top: 50px;
+    right: 300px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 150px;
+    transition: background-color 0.3s;
+  }
+
+#flaskMsg {
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+  }

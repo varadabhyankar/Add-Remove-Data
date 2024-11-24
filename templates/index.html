@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Remove Data</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+</head>
+<body>
+
+    <form id="dynamicForm" enctype="multipart/form-data" action="submit_form" method="POST">
+        <label for="options">Action</label>
+        <select id="options" name="options" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="upload_course">Upload Course Data</option>
+            <option value="upload_research">Upload Research Paper</option>
+            <option value="upload_general">Upload General Data</option>
+            <option value="delete_course">Delete Course Data</option>
+            <option value="delete_research">Delete Research Paper</option>
+            <option value="view">View Current Data</option>
+        </select>
+
+        <div id="textFieldContainer" style="display: none;">
+            <label for="textField" id="textLabel">Text Field:</label>
+            <input type="text" id="textField" name="textField" maxlength="100" placeholder="Max 100 characters">
+        </div>
+
+        <div id="newSelectContainer" style="display: none;">
+            <label for="newSelect" id="deleteSelect">New Select:</label>
+            <select id="newSelect" name="newSelect">
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+
+        <div id="fileSelectContainer" style="display: none;">
+            <label for="fileSelect">Upload File</label>
+            <input id="fileSelect" type = "file" accept=".csv" name = "inputFile" onchange="handleFileSelect(event)" />
+        </div>
+
+        <div id="linksContainer" style="display: none;">
+        </div>
+
+        <input type="submit" id="submitButton" />
+    </form>
+
+    <button id="logoutButton" type="button" onclick="handleLogout()">Logout</button>
+
+    {% if flask_msg %}
+    <p id="flaskMsg">{{ flask_msg }}</p>
+    {% endif %}
+
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+</body>
+</html>

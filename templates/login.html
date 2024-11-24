@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='login.css') }}">
+</head>
+
+<body>
+    <h1>Faculty Login</h1>
+
+    <form id="loginForm" method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username.label }}
+            {{ form.username }}
+        </div>
+        <div>
+            {{ form.password.label }}
+            {{ form.password }}
+        </div>
+        <div>
+            {{ form.submit }}
+        </div>
+    </form>
+
+    {% if error_msg %}
+        <p style="color: red; margin-top: 10px;">{{ error_msg }}</p>
+    {% endif %}
+
+</body>
+
+
+</html>

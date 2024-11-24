@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Details</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles_upload_msg.css') }}">
+</head>
+<body>
+
+    {% if flask_msg %}
+    <p id="flaskMsg">{{ flask_msg }}</p>
+    {% endif %}
+    
+    <button id="backButton" type="button" onclick="redirectToUpload()">Go Back</button>
+
+    <script>
+        function redirectToUpload(){
+            window.location.replace('/upload_data');
+        }
+    </script>
+</body>
+</html>

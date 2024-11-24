@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Remove Data</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles_query.css') }}">
+</head>
+<body>
+
+    <form id="dynamicForm" action="get_llm_response" method="POST">
+        <label for="options">What do you want to talk about</label>
+        <select id="options" name="options" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="course_query">Professor's courses</option>
+            <option value="research_query">Professor's research interests</option>
+            <option value="general_query">General information about the professor</option>
+            <option value="research_paper">Specific research paper</option>
+        </select>
+
+        <div id="newSelectContainer" style="display: none;">
+            <label for="newSelect" id="newSelectLabel">New Select:</label>
+            <select id="newSelect" name="newSelect">
+                <option value="" disabled selected>Select an option</option>
+            </select>
+        </div>
+
+        <label for="textField" id="textLabel" style="display: none;">Enter your query:</label>
+        <div id="textFieldContainer" style="display: none;">
+            <input type="text" id="textField" name="textField" maxlength="500" placeholder="Max 500 characters">
+            <button id="recordAudio">Record</button>
+        </div>
+
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+    <div id = "response_text"></div>
+    <script src="{{ url_for('static',filename='script_query.js') }}"></script>
+</body>
+</html>

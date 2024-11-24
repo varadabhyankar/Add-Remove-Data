@@ -1,0 +1,115 @@
+/* styles_query.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    min-height: 100vh;
+    padding: 2.5rem;
+}
+
+#dynamicForm {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+#dynamicForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+#dynamicForm select,
+#dynamicForm input[type="text"],
+#dynamicForm textarea,
+#dynamicForm button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#options,
+#newSelect {
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+#textField {
+    border: 1px solid #cccccc;
+}
+
+#dynamicForm button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dynamicForm button:hover {
+    background-color: #45a049;
+}
+
+#response_text {
+    width: 70%;
+    max-width: 1200px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    resize: none;
+    margin-left: 40px;
+    height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#newSelectContainer {
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    #dynamicForm,
+    #response_text {
+        padding: 1rem;
+    }
+
+    #dynamicForm button {
+        font-size: 0.9rem;
+    }
+}
+
+#response_text img{
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+#response_text p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
